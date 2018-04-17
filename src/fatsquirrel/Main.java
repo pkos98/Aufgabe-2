@@ -2,6 +2,7 @@ package fatsquirrel;
 
 import fatsquirrel.core.BoardGame;
 import fatsquirrel.core.EntitySet;
+import fatsquirrel.core.HandOperatedMasterSquirrel;
 import fatsquirrel.core.XY;
 import fatsquirrel.entities.*;
 
@@ -27,7 +28,10 @@ public class Main {
         for (int x = 0; x < boardGame.getWidth(); x++) {
             for (int y = 0; y < boardGame.getHeight(); y++) {
                 XY pos = new XY(x, y);
-                entitySet.add(createEntity(pos), pos);
+                if (x == 0 && y == 0)
+                    entitySet.add(new HandOperatedMasterSquirrel(new XY(0,0)), new XY(0,0));
+                else
+                    entitySet.add(createEntity(pos), pos);
             }
         }
     }

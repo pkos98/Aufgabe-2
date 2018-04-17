@@ -2,9 +2,12 @@ package fatsquirrel.entities;
 
 import fatsquirrel.core.XY;
 
-public class MasterSquirrel extends Entity {
+import java.util.LinkedList;
+import java.util.List;
 
-    MiniSquirrel[] miniSquirrel = new MiniSquirrel[10];
+public abstract class MasterSquirrel extends Entity {
+
+    List<MiniSquirrel> miniSquirrels = new LinkedList<>();
 
     @Override
     public String getSymbol() {
@@ -24,11 +27,7 @@ public class MasterSquirrel extends Entity {
         return false;
     }
 
-    public MiniSquirrel[] creat() {
-        return miniSquirrel;
-    }
-
-    public MiniSquirrel[] getMiniSquireel() {
+    public MiniSquirrel[] getMiniSquirrel() {
         return miniSquirrel;
     }
 
