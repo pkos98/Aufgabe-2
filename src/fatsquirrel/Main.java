@@ -17,9 +17,9 @@ public class Main {
         BoardGame game = new BoardGame();
         EntitySet entitySet = new EntitySet(game);
         initBoard(entitySet, game);
-        System.out.println(game.toString());
 
         while(true) {
+            entitySet.nextRound();
         }
     }
 

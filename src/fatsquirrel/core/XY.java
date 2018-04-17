@@ -4,7 +4,7 @@ import java.util.Random;
 
 public final class XY {
 
-    private static Random random;
+    private static Random random = new Random();
     private int x,y;
 
     public int getX() {
@@ -19,6 +19,11 @@ public final class XY {
         int deltaX = random.nextInt(1 - (-1)) + (-1);
         int deltaY = random.nextInt(1 - (-1)) + (-1);
         return new XY(deltaX, deltaY);
+    }
+
+    @Override
+    public String toString() {
+        return "X: " + x + " | Y:" + y;
     }
 
     public XY(int x, int y) {

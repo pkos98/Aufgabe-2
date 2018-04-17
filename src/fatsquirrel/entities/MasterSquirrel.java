@@ -19,16 +19,6 @@ public abstract class MasterSquirrel extends Entity {
         energy = 1000;
     }
 
-    public boolean checkEntity(Entity entity) {
-        for (int i = 0; i < miniSquirrel.length; i++) {
-            if(true)
-                return true;
-        }
-        return false;
-    }
-
-    public MiniSquirrel[] getMiniSquirrel() {
-        return miniSquirrel;
-    }
+    public boolean checkEntity(Entity entity) { return false; }
 
 }

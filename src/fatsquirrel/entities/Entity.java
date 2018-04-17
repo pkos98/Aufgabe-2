@@ -19,7 +19,8 @@ public abstract class Entity {
     public XY getPosition() {
         return position;
     }
-
+    public void resetEnergy() {energy = 0;}
+    public int getEnergy() {return energy;}
     public abstract String getSymbol();
 
     public XY nextStep() {

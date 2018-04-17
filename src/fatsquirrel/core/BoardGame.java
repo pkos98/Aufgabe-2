@@ -4,8 +4,8 @@ import fatsquirrel.entities.Entity;
 
 public class BoardGame {
 
-    public static final int WIDTH = 20;
-    public static final int HEIGHT = 20;
+    public static final int WIDTH = 10;
+    public static final int HEIGHT = 10;
     private Entity[][] boardMatrix = new Entity[WIDTH][HEIGHT];
 
     public int getWidth() {
