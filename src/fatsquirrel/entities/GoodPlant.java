@@ -9,6 +9,11 @@ public class GoodPlant extends Entity {
         return "GP";
     }
 
+    @Override
+    public XY nextStep() {
+        return position;
+    }
+
     public GoodPlant(XY startPos) {
         super(startPos);
         energy = 100;

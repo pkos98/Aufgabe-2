@@ -9,6 +9,11 @@ public class Wall extends Entity {
         return "WL";
     }
 
+    @Override
+    public XY nextStep() {
+        return position;
+    }
+
     public Wall(XY startPos) {
         super(startPos);
         energy = -10;
