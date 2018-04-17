@@ -16,6 +16,10 @@ public class Main {
         BoardGame game = new BoardGame();
         EntitySet entitySet = new EntitySet(game);
         initBoard(entitySet, game);
+        System.out.println(game.toString());
+
+        while(true) {
+        }
     }
 
     private static void initBoard(EntitySet entitySet, BoardGame boardGame) {
@@ -26,7 +30,6 @@ public class Main {
                 entitySet.add(createEntity(pos), pos);
             }
         }
-
     }
 
     private static Entity createEntity(XY pos) {
@@ -43,6 +46,7 @@ public class Main {
             return new BadBeast(pos);
         else if (randomNum == 11)
             return new Wall(pos);
+        return null;
     }
 
 }

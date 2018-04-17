@@ -16,4 +16,8 @@ public class MiniSquirrel extends Entity {
         return patron;
     }
 
+    @Override
+    public String getSymbol() {
+        return "ms";
+    }
 }

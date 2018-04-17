@@ -6,6 +6,11 @@ public class MasterSquirrel extends Entity {
 
     MiniSquirrel[] miniSquirrel = new MiniSquirrel[10];
 
+    @Override
+    public String getSymbol() {
+        return "MS";
+    }
+
     public MasterSquirrel(XY startPos) {
         super(startPos);
         energy = 1000;

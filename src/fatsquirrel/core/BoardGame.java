@@ -4,7 +4,9 @@ import fatsquirrel.entities.Entity;
 
 public class BoardGame {
 
-    private Entity[][] boardMatrix = new Entity[20][20];
+    public static final int WIDTH = 20;
+    public static final int HEIGHT = 20;
+    private Entity[][] boardMatrix = new Entity[WIDTH][HEIGHT];
 
     public int getWidth() {
         return boardMatrix.length;
@@ -33,9 +35,26 @@ public class BoardGame {
 
     }
 
-    private boolean isInRange(XY pos) {
-        return !(pos.getX() < 0 || pos.getX() > getWidth() ||
-        pos.getY() < 0 || pos.getY() > getHeight());
+    @Override
+    public String toString() {
+        String result = "";
+
+        for (int x = 0; x < getWidth(); x++) {
+            for (int y = 0; y < getHeight(); y++) {
+                Entity field = getEntity(new XY(x, y));
+                if (field == null)
+                    result += " + ";
+                else
+                    result += " " + field.getSymbol() + " ";
+            }
+            result += System.lineSeparator();
+        }
+        return result;
+    }
+
+    public static boolean isInRange(XY pos) {
+        return !(pos.getX() < 0 || pos.getX() >= WIDTH ||
+        pos.getY() < 0 || pos.getY() >= HEIGHT);
     }
 
 }

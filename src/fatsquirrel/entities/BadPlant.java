@@ -9,4 +9,9 @@ public class BadPlant extends Entity {
         energy = -100;
     }
 
+    @Override
+    public String getSymbol() {
+        return "BP";
+    }
+
 }

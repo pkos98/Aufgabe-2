@@ -8,4 +8,9 @@ public class GoodBeast extends Entity {
         super(startPos);
         energy = 200;
     }
+
+    @Override
+    public String getSymbol() {
+        return "GB";
+    }
 }
